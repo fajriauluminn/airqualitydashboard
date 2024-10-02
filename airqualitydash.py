@@ -27,7 +27,7 @@ def create_mean_co_param(df):
     mean_co_param = df.groupby("station").CO.mean().sort_values(ascending=False).reset_index()
     return mean_co_param
 
-df_airquality = pd.read_csv("df_airquality.zip")
+df_airquality = pd.read_csv("df_airquality.csv")
 
 df_airquality['datetime'] = pd.to_datetime(df_airquality['datetime'])
 
