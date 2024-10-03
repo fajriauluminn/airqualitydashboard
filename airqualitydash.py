@@ -29,7 +29,6 @@ def create_mean_co_param(df):
 
 url = "https://media.githubusercontent.com/media/fajriauluminn/airqualitydashboard/refs/heads/main/df_airquality.csv"
 df_airquality = pd.read_csv(url)
-st.write(df_airquality)
 
 df_airquality['datetime'] = pd.to_datetime(df_airquality['datetime'])
 
