@@ -27,7 +27,7 @@ def create_mean_co_param(df):
     mean_co_param = df.groupby("station").CO.mean().sort_values(ascending=False).reset_index()
     return mean_co_param
 
-url = "https://github.com/fajriauluminn/airqualitydashboard/blob/main/df_airquality.csv"
+url = "https://media.githubusercontent.com/media/fajriauluminn/airqualitydashboard/refs/heads/main/df_airquality.csv"
 df_airquality = pd.read_csv(url)
 st.write(df_airquality)
 
