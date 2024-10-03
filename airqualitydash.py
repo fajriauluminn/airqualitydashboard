@@ -28,11 +28,8 @@ def create_mean_co_param(df):
     return mean_co_param
 
 df_airquality = pd.read_csv("df_airquality.csv")
+df_airquality['datetime'] = pd.to_datetime(df_airquality['datetime'])
 
-if 'datetime' in df_airquality.columns:
-    df_airquality['datetime'] = pd.to_datetime(df_airquality['datetime'])
-else:
-    print("Column 'datetime' not found in DataFrame.")
 
 df_airquality.sort_values(by="datetime", inplace=True)
 df_airquality.reset_index(inplace=True)
