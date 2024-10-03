@@ -29,6 +29,8 @@ def create_mean_co_param(df):
 
 df_airquality = pd.read_csv("df_airquality.csv")
 df_airquality['datetime'] = pd.to_datetime(df_airquality['datetime'])
+st.write(df_airquality.columns)
+st.write(df_airquality.head())
 
 
 df_airquality.sort_values(by="datetime", inplace=True)
